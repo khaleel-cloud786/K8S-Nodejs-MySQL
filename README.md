@@ -4,16 +4,16 @@
 `echo -n 'khaleel' | base64`
 
 ##### First Create Secret for MySQL #####
-`kubectl apply -f mysql-secret.yaml`
+`kubectl apply -f k8s/mysql-secret.yaml`
 
 ##### Now deploy the pv, pvc manifest file, where all your mysql data will be stored. Here i used nfs #####
-`kubectl apply -f mysql-pv_pvc.yaml`
+`kubectl apply -f k8s/mysql-pv_pvc.yaml`
 
 ##### Now deploy the Mysql Pod #####
-`kubectl apply -f mysql-deployment.yaml`
+`kubectl apply -f k8s/mysql-deployment.yaml`
 
 ##### Now deploy the Mysql Service #####
-`kubectl apply -f mysql-service.yaml`
+`kubectl apply -f k8s/mysql-service.yaml`
 
 ##### Once the POD and Service of MySQL are running, the next step is to create the DB & Tables in MySQL #####
 `kubectl exec nodejs-mysql -it -- bash`
@@ -46,7 +46,7 @@ flush privileges;<br />
 `docker push shaikabdulkhaleel/nodecrud:v1`
 
 ##### Now deploy the nodejs k8s manifest file, which has deployment and service objects #####
-`kubectl apply -f node-deployment.yaml`
+`kubectl apply -f k8s/node-deployment.yaml`
 
 `kubectl get pods,svc -l app=node-app`
 
