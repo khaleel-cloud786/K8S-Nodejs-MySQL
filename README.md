@@ -1,5 +1,7 @@
 ## K8S-Nodejs-MySQL Application
-### First Create Secret for MySQL
+
+##### First Create Secret for MySQL #####
+
 ##### Generate the base64 key and use it in the mysql-secret.yaml file #####
 `echo -n 'khaleel' | base64`
 ####
