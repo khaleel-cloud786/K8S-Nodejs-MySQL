@@ -1,1 +1,3 @@
-# K8S-Nodejs-MySQL
+## K8S-Nodejs-MySQL Application
+### First Create Secret for MySQL
+`khkhkkhk`
