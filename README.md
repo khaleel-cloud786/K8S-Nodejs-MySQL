@@ -1,10 +1,9 @@
 ## K8S-Nodejs-MySQL Application
 
-##### First Create Secret for MySQL #####
-
 ##### Generate the base64 key and use it in the mysql-secret.yaml file #####
 `echo -n 'khaleel' | base64`
-####
+
+##### First Create Secret for MySQL #####
 `kubectl apply -f mysql-secret.yaml`
 
 ##### Now deploy the pv, pvc manifest file, where all your mysql data will be stored. Here i used nfs #####
