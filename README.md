@@ -38,10 +38,17 @@ ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'khaleel';<br />
 
 flush privileges;<br />
 
+##### Got the nodejs Directory #####
+`cd nodejs`
+
 ##### Now edit index.js file and change the mysql credentials #####
 `docker build -t nodecrud:v1 .`
 
 `docker image tag nodecrud:v1 shaikabdulkhaleel/nodecrud:v1`
+
+`docker login --username=shaikabdulkhaleel`
+
+###### Enter your docker hub credentials ######
 
 `docker push shaikabdulkhaleel/nodecrud:v1`
 
